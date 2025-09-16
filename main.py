@@ -21,7 +21,7 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
 origins = [
-    "https://ohcorientation.vercel.app/"
+    "https://ohcorientation.vercel.app"
 ]
 
 app.add_middleware(
