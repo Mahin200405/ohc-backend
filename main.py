@@ -20,9 +20,13 @@ engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
+origins = [
+    "https://ohcorientation.vercel.app/"
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Adjust this for production!
+    allow_origins=origins,  # Adjust this for production!
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
